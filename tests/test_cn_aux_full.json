@@ -1,6 +1,6 @@
 {
-  "last_node_id": 43,
-  "last_link_id": 42,
+  "last_node_id": 45,
+  "last_link_id": 44,
   "nodes": [
     {
       "id": 1,
@@ -40,7 +40,8 @@
             18,
             19,
             20,
-            21
+            21,
+            44
           ],
           "shape": 3,
           "slot_index": 0
@@ -559,6 +560,70 @@
       "properties": {
         "Node name for S&R": "PreviewImage"
       }
+    },
+    {
+      "id": 45,
+      "type": "PreviewImage",
+      "pos": [
+        886,
+        2316
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 44,
+      "type": "TilePreprocessor",
+      "pos": [
+        419,
+        2320
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            43
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TilePreprocessor"
+      },
+      "widgets_values": [
+        3
+      ]
     },
     {
       "id": 2,
@@ -1645,6 +1710,22 @@
       21,
       0,
       42,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      44,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      1,
+      0,
+      44,
       0,
       "IMAGE"
     ]
